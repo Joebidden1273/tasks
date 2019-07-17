@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+} 
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+
+  nav {
+    border-bottom: 1px solid black;
+}
+
+.crumbs ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.crumb {
+    display: inline-block;
+}
+
+.crumb a::after {
+    display: inline-block;
+    color: #000;
+    content: '>';
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
+}
+
+}
+
+
+#para1 {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  75% {
+    font-size: 150%;
+    margin-left: 25%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}

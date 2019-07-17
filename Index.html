@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- Styling links -->
+		<style>
+			/* unvisited link */
+			a:link {
+			  color: red;
+			}
+
+			/* visited link */
+			a:visited {
+			  color: blue;
+			}
+
+			/* mouse over link */
+			a:hover {
+			  color: hotpink;
+			}
+
+			/* selected link */
+			a:active {
+			  color: green;
+			}
+		</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--Links-->
+<!--<link rel="stylesheet" type="text/css" href="styles.css">--> <!--CSS file before implementing LESS-->
+<link rel="stylesheet/less" type="text/css" href="style.less">
+<script src="less.js" type="text/javascript"></script>
+
+	<title>Eclectics-Kenya</title>
+</head>
+<body style="background-image:url();background-color: lightblue ">
+	<div id="" style="border-bottom: solid;">
+	    
+		<h1 style="color: #0000ff;font-size: 50px;font-family:; margin-bottom: 1px ;margin-left: 20px;"> <img src="images/e-logo.jpg" style="float: left;height: 150px; margin-right: 10px;"> Eclectics <br>International</h1>
+		<p style="color: DodgerBlue; margin-top: 0px;">Amplifying Business Potential</p>
+        
+	</div>
+	<!----GRAPHIS---------->
+
+<svg width="1330" height="20">
+  <rect width="1330" height="20" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+</svg>
+
+
+	<div style=" margin-left: 15%;margin-bottom: 30px; background-color:rgba(255, 99, 71, 0.5);padding-top: 20px;padding-bottom: 10px;padding-left: 50px;">
+        <a href="index.html">HOME PAGE || </a>
+		<a href="url"><b>OUR BUSINESS</b> || </a>
+		<a href="url"><b>SOLUTIONS</b> || </a>
+		<a href="url"><b>CASE STUDIES</b> || </a>
+		<a href="url"><b>OUR PEOPLE</b> || </a>
+		<a href="url"><b>PERSPECTIVES</b> || </a>
+		<a href="url"><b>CAREERS</b> || </a>
+		<a href="url"><b>CONTACTS || </a>
+		<a href="uploads.html"><b>UPLOADS</a>
+	</div>
+<!--Nav
+	<nav class="crumbs">
+      <ul>
+        <li class="crumb"><a href="uploads.html"><b>VIDEO UPLOADS</a></li>
+        <li class="crumb"><a href="url"><b>CASE STUDIES</b></a></li>
+      </ul>
+    </nav>
+  -->
+
+
+<!----GRAPHIS----------
+	<svg width="100" height="100">
+	  <circle cx="30" cy="30" r="20" stroke="green" stroke-width="4" fill="yellow" />
+	</svg>--->
+
+<!---<svg width="300" height="200">
+  <polygon points="100,10 40,198 190,78 10,78 160,198"
+  style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;float: right;" />
+</svg>--->
+
+
+
+<article id="para1">
+<h2 style="color: blue"><i>Mission</i></h2>
+<p><i>Simplify lives Digitally</i></p>
+<h2 style="color: blue"><i>Vision</i></h2>
+<p><i>To be entrusted provider of quality and affordable digital solutions</i></p>
+</article><br>
+
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2 style="color: blue">AT A GLANCE</h2>
+    <p>Eclectics International is a technology savvy company transforming Africa through innovative, state of the art tailor-made software solutions for Banking, Financial, Agricultural, Transport & Public sector.</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2 style="color: blue">ABOUT US</h2>
+    <p>Eclectics International is a technology savvy company transforming Africa through innovative, state of the art tailor-made software solutions for Banking, Financial, Agricultural, Transport & Public sector.</p>
+
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <h2 style="color: blue">AT A GLANCE</h2>
+		<p>Eclectics International is a technology savvy company transforming Africa through innovative, state of the art tailor-made software solutions for Banking, Financial, Agricultural, Transport & Public sector.</p>
+  </div>
+</div>
+
+
+
+
+<!----GRAPHIS---------->
+<svg width="1330" height="20">
+  <rect width="1330" height="20" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+</svg>
+
+
+<fieldset style="border-color: solid LightGray ;background-color:LightGray ;padding-top: 10px;">
+	
+	<h4 style="color: blue">FOR MORE INFORMATION</h4>
+
+<div class="row">
+  <div class="column" style="background-color:;">
+    <p><b><u>Postal Address</u></b></p>
+    <address>
+			<p>Eclectics International.</p>
+			<p>P.O BOX XXXXXXXXXXX,</p>
+			<p>Nairobi,Kenya.</p>	
+		</address>
+  </div>
+  <div class="column" style="background-color:;">
+    <p><b><u>Email Address</u></b></p>
+    <p>Email us at:<br> @ekenya.co.ke <br><br>or<br><br>@ekenya.co.ke</p>
+  </div>
+  <div class="column" style="background-color:;">
+    <p><b><u>Our Location</b></u></p>
+    <P>Eclectics International,Located at <br><br>Utumishi House, 3rd Floor,<br><br>Kenyatta Avenue,Nairobi</P>	
+
+    <!--GEOLOCATION API STARTS HERE-->
+
+          <button id = "find-me">Show my location</button><br/>
+<p id = "status"></p>
+<a id = "map-link" target="_blank"></a>
+
+<script>
+function geoFindMe() {
+
+  const status = document.querySelector('#status');
+  const mapLink = document.querySelector('#map-link');
+
+  mapLink.href = '';
+  mapLink.textContent = '';
+
+  function success(position) {
+    const latitude  = position.coords.latitude;
+    const longitude = position.coords.longitude;
+
+    status.textContent = '';
+    mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
+    mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+  }
+
+  function error() {
+    status.textContent = 'Unable to retrieve your location';
+  }
+
+  if (!navigator.geolocation) {
+    status.textContent = 'Geolocation is not supported by your browser';
+  } else {
+    status.textContent = 'Locating…';
+    navigator.geolocation.getCurrentPosition(success, error);
+  }
+
+}
+
+document.querySelector('#find-me').addEventListener('click', geoFindMe);
+
+</script>
+
+
+    <!--GEOLOCATION API ENDS HERE HERE-->
+
+  </div>
+</div>
+
+<footer style="text-align: center;">&copy; Copyright @Eclectics International-Kenya 2019</footer>
+
+</fieldset>
+
+<!----GRAPHIS---------->
+<svg width="1330" height="20">
+  <rect width="1330" height="20" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+</svg>
+
+
+</body>
+</html>
