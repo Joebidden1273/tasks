@@ -1,0 +1,61 @@
+<<html>
+<head>
+            <title>Simple Drawing Program</title>
+           <style type = "text/css">
+              #canvas { width: 400px;
+                        border: 1px solid #999999;
+                        border-collapse: collapse }
+              td      { width: 4px;
+                        height: 4px }
+              th.key  { font-family: arial, helvetica, sans-serif;
+                        font-size: 12px;
+                        border-bottom: 1px solid #999999 }
+           </style>
+           <script type = "text/javascript">
+              <!--
+              //initialization function to insert cells into the table
+              function createCanvas ()
+              {
+                 var side = 100;
+                 var tbody = document.getElementById( "tablebody" );
+  
+                 for ( var i = 0; i < side; i++ )
+                 {
+                    var row = document.createElement( "tr" );
+  
+                    for ( var j = 0; j < side; j++ )
+                    {
+                       var cell = document.createElement( "td" );
+                       cell.onmousemove = processMouseMove;
+                       row.appendChild( cell );
+                    } // end for
+  
+                    tbody.appendChild( row );
+                 } // end for
+              } // end function createCanvas
+  
+              // processes the onmousemove event
+              function processMouseMove( e )
+              {
+                 // get the event object from IE
+                 if ( !e )
+                    var e = window.event;
+  
+                 // turn the cell blue if the Ctrl key is pressed
+                 if ( e.ctrlKey )
+                    this.style.backgroundColor = "blue";
+  
+                 // turn the cell red if the Shift key is pressed
+                 if ( e.shiftKey )
+                    this.style.backgroundColor = "red";
+              } // end function processMouseMove
+              // -->
+           </script>
+        </head>
+        <body onload = "createCanvas()">
+           <table id = "canvas" class = "canvas"><tbody id = "tablebody">
+           <tr><th class = "key" colspan = "100">Hold <tt>ctrl</tt>
+              to draw blue. Hold  <tt>shift</tt> to draw red.</th></tr>
+           </tbody></table>
+        </body>
+     </html>
